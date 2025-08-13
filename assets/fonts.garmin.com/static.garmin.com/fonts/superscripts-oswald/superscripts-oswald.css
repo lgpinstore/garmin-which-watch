@@ -1,0 +1,5 @@
+@font-face {
+	font-family: 'Superscripts-Oswald';
+	src: url("Superscript-Oswald-Regular.otf") format("opentype");
+	unicode-range: U+00AE,U+2122,U+2120;
+}
