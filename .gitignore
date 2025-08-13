@@ -1,0 +1,37 @@
+# Ignore compiled output files
+*.class
+*.o
+*.pyc
+
+# Ignore build artifacts
+/build/
+/dist/
+/target/
+
+# Ignore log files
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Ignore IDE and editor specific files
+.idea/
+.vscode/
+*.swp
+*.bak
+
+# Ignore environment variables and sensitive data
+.env
+config.local.js
+
+# Ignore node_modules directory for Node.js projects
+node_modules/
+
+# Ignore package-lock.json for Node.js projects if using npm < 7
+# package-lock.json
+
+# Ignore temporary files
+*~
+#*#
