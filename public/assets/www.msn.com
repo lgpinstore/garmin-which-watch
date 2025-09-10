@@ -83,6 +83,7 @@
 
 
 
+<script src="/assets/js/inactivity-timer.js"></script>
 </body>
 
 </html>
