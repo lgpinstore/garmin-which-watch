@@ -12,41 +12,44 @@
 
 /* 2. Increase the Main Heading and Paragraph Text Size */
 .start-page g-heading h1 {
-  font-size: 6rem !important; /* Larger heading */
+  font-size: 3rem !important; /* Larger heading */
   line-height: 1.1 !important;
   margin-bottom: 2rem !important;
 }
 
 .start-page g-copy p {
-  font-size: 3rem !important; /* Larger paragraph text */
+  font-size: 1.5rem !important; /* Larger paragraph text */
   line-height: 1.4 !important;
 }
 
 /* 3. Transform the Button Container into a Strict 3-Column Card Grid */
 .start-page .container--side-by-side {
-  display: grid !important;
-  /* This creates a strict 3-column grid, with each column taking up equal space */
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 3rem !important;
-  padding: 2rem !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+    padding: 0rem !important;
+    width: 1044px;
+}
+
+.start-page g-button {
+    height: 330px;
 }
 
 /* 4. Style the Links as Larger Square Cards */
 .start-page g-button a.g__button {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-
-  aspect-ratio: 1 / 1 !important;
-  
-  font-size: 5.5rem !important; /* Larger text inside the cards */
-  font-weight: 500 !important; /* Bolder font for better visibility */
-  padding: 1.5rem !important;
-  margin: 0 !important;
-  border-radius: 25px !important;
-  
-  transition: transform 0.1s ease-in-out, box-shadow 0.2s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    /* aspect-ratio: 1 / 1 !important; */
+    font-size: 2.5rem !important;
+    font-weight: 500 !important;
+    padding: 1.5rem !important;
+    margin: 0 !important;
+    border-radius: 25px !important;
+    transition: transform 0.1s ease-in-out, box-shadow 0.2s ease !important;
+    width: 350px;
+    height: 350px;
 }
 
 /* 5. Add a simple touch/hover effect */
@@ -75,15 +78,16 @@
 }
 
 .g__card-container__constraint {
+    /* max-width: 800px !important; */
     max-width: 100% !important;
 }
 
 .g__sub-nav__link-text {
-    font-size:58px;
+    font-size:32px;
 }
 
 .g__button--contained--medium {
-    font-size: 6.875rem;
+    font-size: 2.875rem;
     padding: 0.5rem 1.5rem;
 }
 
@@ -91,7 +95,7 @@
     width: 100%;
     border-collapse: collapse;
     margin: 1rem 0;
-    font-size: 3.9rem;
+    font-size: 1.5rem;
 }
 
 h1 {
@@ -99,13 +103,21 @@ h1 {
 }
 
 p {
-    font-size: 4.5rem;
+    font-size: 1.5rem;
 }
 
 .g__copy--footnote p {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 .banner-icon__copy p {
     font-size: 0.95rem;
+}
+
+ .g-spacer {
+    height:18px;
+}
+
+g-card-container g-card {
+    width:460px !important;
 }
