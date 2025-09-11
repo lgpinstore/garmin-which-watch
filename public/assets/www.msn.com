@@ -84,6 +84,6 @@
 
 
 <script src="/assets/js/inactivity-timer.js"></script>
-</body>
+<link rel="stylesheet" href="/assets/css/brightsign-overrides.css" /></body>
 
 </html>
