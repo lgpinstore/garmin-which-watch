@@ -121,3 +121,50 @@ p {
 g-card-container g-card {
     width:460px !important;
 }
+
+/* ==========================================================================
+   1. Navigation Bar
+   ========================================================================== */
+nav.g__sub-nav--base {
+  display: grid !important;
+  grid-template-columns: 1fr auto 1fr !important; /* 3-column layout */
+  align-items: end !important; /* Aligns all items to the bottom */
+  padding: 1rem 2vw 0 !important; /* Add padding but none at the bottom */
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff !important; /* Ensure background is solid white */
+}
+
+/* Style the logo container */
+nav.g__sub-nav--base .gh__logo-container__logo {
+  grid-column: 1;
+  justify-self: start;
+  align-self: center; /* Vertically center the logo within the nav bar's height */
+  width: 250px !important;
+  height: auto !important;
+  margin: 0 !important;
+}
+
+/* Style the "WHICH WATCH" title */
+nav.g__sub-nav--base .g__sub-nav__link--active {
+  grid-column: 2;
+  justify-self: center;
+  padding: 0.5rem 2rem !important; /* Add padding for a nice background effect */
+  margin-bottom: -2px; /* Pulls the item down slightly over the border */
+  border-bottom: 5px solid #6dcff6; /* Garmin's "candy-blue" for the active state */
+  font-size: 2rem !important; /* User-specified 32px, converted to rem */
+  color: #000 !important;
+}
+
+/* Remove the default active state underline */
+nav.g__sub-nav--base .g__sub-nav__link--active::after {
+  display: none !important;
+}
+
+.g__card-container {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
