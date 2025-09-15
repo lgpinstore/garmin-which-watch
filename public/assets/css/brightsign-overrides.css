@@ -55,8 +55,8 @@
 /* 5. Add a simple touch/hover effect */
 .start-page g-button a.g__button:hover,
 .start-page g-button a.g__button:active {
-  transform: scale(1.03) !important;
-  box-shadow: 0px 10px B0px rgba(0, 0, 0, 0.4) !important;
+  transform: scale(1.02) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
 .container container--side-by-side center {
@@ -171,4 +171,24 @@ nav.g__sub-nav--base .g__sub-nav__link--active::after {
 
 .g__card__button-overlay {
     cursor: default !important;
+}
+
+/* /Users/justinhall/Projects/BrightSign/Projects/Garmin-BS/garmin-which-watch/public/assets/css/brightsign-overrides.css */
+
+/* Prevent the g-card from changing box-shadow on hover */
+.g__card:hover:not(.g__card--non-clickable) {
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.24); /* This is the card's default shadow */
+}
+
+/*
+ * Forcefully disable all transitions on g-card elements to prevent any
+ * "flash" or animation on tap, while keeping them clickable.
+ */
+g-card.g__card {
+  transition: none !important;
+}
+
+/* For touch devices, remove the highlight color on tap */
+g-card, a, button, g-button {
+  -webkit-tap-highlight-color: transparent;
 }
