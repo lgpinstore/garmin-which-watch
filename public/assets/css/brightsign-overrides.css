@@ -168,3 +168,7 @@ nav.g__sub-nav--base .g__sub-nav__link--active::after {
     flex-flow: row wrap;
     justify-content: center;
 }
+
+.g__card__button-overlay {
+    cursor: default !important;
+}
