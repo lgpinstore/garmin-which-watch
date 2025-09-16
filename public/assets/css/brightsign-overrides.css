@@ -192,3 +192,59 @@ g-card.g__card {
 g-card, a, button, g-button {
   -webkit-tap-highlight-color: transparent;
 }
+
+/*
+  This file contains custom button styles to override default focus behavior.
+*/
+
+.g__button:focus {
+  outline: 2px solid #fff !important;
+  outline-offset: 2px;
+}
+
+/* If you prefer a box-shadow instead of an outline */
+/*
+.g__button:focus {
+  box-shadow: 0 0 0 2px #fff !important;
+  outline: none;
+}
+*/
+
+.g__card__button-overlay {
+  border:0px !important
+}
+
+/*
+ * Override native browser focus/selection styles on touchscreens.
+ * A long-press on a touch device can trigger a focus or selection state
+ * that shows a default (often brownish-yellow) outline. This is common
+ * on Chromium-based browsers used in devices like BrightSign players.
+ */
+.g__card__button-overlay:focus,
+.g__card__button-overlay:active {
+  outline: none !important; /* Removes the outline */
+  border: none !important;
+  -webkit-tap-highlight-color: transparent; /* Removes tap highlight on WebKit browsers */
+}
+
+/*
+ * For an alternative that provides a white focus ring instead of removing
+ * it completely, you can use this.
+ */
+/*
+.g__card__button-overlay:focus-visible {
+  outline: 3px solid #fff !important;
+  outline-offset: -3px;
+}
+*/
+
+/*
+ * Prevent image selection on long press, which can also show a highlight,
+ * and ensure the overlay button always receives pointer events.
+ */
+.g__card img {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+  pointer-events: none;
+}
