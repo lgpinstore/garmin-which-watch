@@ -35,3 +35,7 @@ node_modules/
 # Ignore temporary files
 *~
 #*#
+
+/from_sd_card/
+
+.firebase/
