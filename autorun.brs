@@ -1,5 +1,35 @@
 sub main()
 
+    ' Create a registry object for our application's settings
+    rs = CreateObject("roRegistrySection", "app_settings")
+    
+    ' Check if our one-time orientation setup has been done
+    ' If the key doesn't exist, rs.Read() returns invalid.
+    if rs.Read("orientation_set") = invalid then
+        print "First run detected. Setting screen orientation to Portrait (90)..."
+        
+        vidmode = CreateObject("roVideoMode")
+        sm = vidmode.GetScreenModes()
+        
+        sm[0].transform = "90"
+        vidmode.SetScreenModes(sm)
+        
+        ' SUCCESS! Now, write the flag to the registry so this code never runs again.
+        rs.Write("orientation_set", "true")
+        rs.Flush() ' Save changes to persistent storage
+        
+        print "Orientation set. Rebooting now."
+        RebootSystem()
+        
+    else
+        ' This will be printed on every boot AFTER the first one.
+        print "Orientation already configured. Skipping setup."
+        
+        ' --- LAUNCH YOUR MAIN APPLICATION SCRIPT FROM HERE ---
+        ' For example: script "sd:/main_app.brs"
+        
+    end if
+
     print "Hello main"
 
     serverPort% = 8000
@@ -41,8 +71,11 @@ function startWidget(url,p) as object
 
     x = 0
     y = 0
-    width = 1920
-    height = 1080
+    ' width = 1920
+    ' height = 1080
+
+    width = 1080
+    height = 1920
 
     rect = CreateObject("roRectangle", x, y, width, height)
 
