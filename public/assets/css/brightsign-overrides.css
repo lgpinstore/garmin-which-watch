@@ -4,9 +4,13 @@
  * - Significantly increases all font sizes for kiosk visibility.
  */
 
+ html {
+  background-color: white;
+ }
+
 /* 1. Style the Introductory Text Container */
 .start-page .container.container--constraint {
-  max-width: 90% !important; /* Widen container slightly to accommodate larger text */
+  max-width: 80% !important; /* Widen container slightly to accommodate larger text */
   margin: 0 auto !important;
 }
 
@@ -25,14 +29,14 @@
 /* 3. Transform the Button Container into a Strict 3-Column Card Grid */
 .start-page .container--side-by-side {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 2rem !important;
     padding: 0rem !important;
-    width: 1044px;
+    width: 600px;
 }
 
 .start-page g-button {
-    height: 330px;
+    height: 385px;
 }
 
 /* 4. Style the Links as Larger Square Cards */
@@ -48,8 +52,8 @@
     margin: 0 !important;
     border-radius: 25px !important;
     transition: transform 0.1s ease-in-out, box-shadow 0.2s ease !important;
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
 }
 
 /* 5. Add a simple touch/hover effect */
